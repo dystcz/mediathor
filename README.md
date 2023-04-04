@@ -7,6 +7,7 @@ Packed with sensible defaults and endless configurability.
 [![Total Downloads](https://img.shields.io/packagist/dt/dystcz/mediathor.svg?style=flat-square)](https://packagist.org/packages/dystcz/mediathor)
 ![GitHub Actions](https://github.com/dystcz/mediathor/actions/workflows/main.yml/badge.svg)
 
+![](https://media.tenor.com/okRitQnLPD8AAAAC/cosplay-thor.gif)
 
 ## Installation
 
