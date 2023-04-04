@@ -17,7 +17,9 @@
     ],
     "require": {
         "php": "^8.1",
-        "illuminate/support": "^9.0|^10.0"
+        "illuminate/support": "^9.0|^10.0",
+        "sopamo/laravel-filepond": "^1.2",
+        "spatie/laravel-medialibrary": "^10.0.0"
     },
     "require-dev": {
         "driftingly/rector-laravel": "^0.17.0",

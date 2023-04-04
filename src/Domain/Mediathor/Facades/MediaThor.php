@@ -1,6 +1,6 @@
 <?php
 
-namespace Dystcz\Mediathor\Facades;
+namespace Dystcz\Mediathor\Domain\Mediathor\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

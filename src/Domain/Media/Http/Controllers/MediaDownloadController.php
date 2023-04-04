@@ -1,0 +1,25 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Dystcz\Mediathor\Domain\Media\Http\Controllers;
+
+use Dystcz\Mediathor\Domain\Base\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Validation\ValidationException;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+
+class MediaDownloadController extends Controller
+{
+    /**
+     * Download media.
+     *
+     * @throws ValidationException
+     */
+    public function __invoke(Request $request, Media $media): JsonResource|StreamedResponse
+    {
+        return $media->toInlineResponse($request);
+    }
+}

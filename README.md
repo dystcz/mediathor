@@ -17,13 +17,33 @@ You can install the package via composer:
 composer require dystcz/mediathor
 ```
 
+Run the installer:
+```bash
+php artisan mediathor:install
+```
+
+<details>
+  <summary>You can also install manually:</summary>
+
+  ```bash
+# Publish Medialibrary migrations
+php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
+
+# Publish Medialibrary config
+php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="config"
+
+# Run migrations
+php artisan migrate
+  ```
+</details>
+
 ## Features
 
 - [ ] [Filepond](https://pqina.nl/filepond/) media upload
     - [ ] `UploadController`
 - [ ] Preconfigured [Glide](https://glide.thephpleague.com/) for image manipulations and Nuxt image
     - [ ] `GlideImageController`
-- [ ] [Laravel-medialibrary](https://github.com/spatie/laravel-medialibrary) with sensible defaults including:
+- [ ] [Medialibrary](https://github.com/spatie/laravel-medialibrary) with sensible defaults including:
     - [ ] Image conversions
     - [ ] Responsive images with `srcset`
     - [ ] `MediaResource` for your APIs
@@ -34,8 +54,8 @@ Everything is configurable via in `config/mediathor.php`
 
 ## Usage
 
-```php
-// Usage description here
+```bash
+# Usage
 ```
 
 ### Testing

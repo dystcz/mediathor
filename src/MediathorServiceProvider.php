@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dystcz\Mediathor;
 
+use Dystcz\Mediathor\Domain\Mediathor\MediaThor;
 use Illuminate\Support\ServiceProvider;
 
 class MediaThorServiceProvider extends ServiceProvider
@@ -15,24 +18,14 @@ class MediaThorServiceProvider extends ServiceProvider
          * Optional methods to load your package assets
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'mediathor');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'mediathor');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
+
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('mediathor.php'),
             ], 'config');
-
-            // Publishing the views.
-            /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/mediathor'),
-            ], 'views');*/
-
-            // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/mediathor'),
-            ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
@@ -50,7 +43,7 @@ class MediaThorServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'mediathor');
+        $this->mergeConfigFrom(__DIR__.'/../config/mediathor.php', 'mediathor');
 
         // Register the main class to use with the facade
         $this->app->singleton('mediathor', function () {
