@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Dystcz\Mediathor;
+namespace Dystcz\MediaThor;
 
-use Dystcz\Mediathor\Domain\Mediathor\MediaThor;
+use Dystcz\MediaThor\Domain\Base\Console\Commands\InstallCommand;
+use Dystcz\MediaThor\Domain\MediaThor\MediaThor;
 use Illuminate\Support\ServiceProvider;
 
 class MediaThorServiceProvider extends ServiceProvider
@@ -17,15 +18,19 @@ class MediaThorServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'mediathor');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-
         $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
         if ($this->app->runningInConsole()) {
+            // Publishing the config.
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('mediathor.php'),
+                __DIR__.'/../config/mediathor.php' => config_path('mediathor.php'),
             ], 'config');
+
+            // Publishing the migrations.
+            // $this->publishes([
+            //     __DIR__.'/../database/migrations/create_media_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_media_table.php'),
+            //     // you can add any number of migrations here
+            // ], 'migrations');
 
             // Publishing the translation files.
             /*$this->publishes([
@@ -33,7 +38,9 @@ class MediaThorServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                InstallCommand::class,
+            ]);
         }
     }
 
