@@ -7,7 +7,7 @@ namespace Dystcz\MediaThor\Domain\MediaThor\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Dystcz\MediaThor\Skeleton\SkeletonClass
+ * @see \Dystcz\MediaThor\Domain\MediaThor\MediaThor
  */
 class MediaThor extends Facade
 {
