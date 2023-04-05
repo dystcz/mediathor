@@ -10,18 +10,18 @@ use Illuminate\Support\Facades\Route;
 
 // Media
 Route::group([
-    'prefix' => Config::get('mediathor.media.route_prefix', 'media'),
-    'middlware' => Config::get('mediathor.media.middleware', []),
-    'without_middleware' => Config::get('mediathor.media.without_middleware', []),
+    'prefix' => Config::get('mediathor.media.routes.prefix', 'media'),
+    'middlware' => Config::get('mediathor.media.routes.middleware', []),
+    'without_middleware' => Config::get('mediathor.media.routes.without_middleware', []),
 ], function () {
     Route::post('/download', MediaDownloadController::class);
     Route::post('/preview', MediaPreviewController::class);
 
     // Files
     Route::group([
-        'prefix' => Config::get('mediathor.media.files.route_prefix', 'files'),
-        'middlware' => Config::get('mediathor.media.files.middleware', []),
-        'without_middleware' => Config::get('mediathor.media.files.without_middleware', []),
+        'prefix' => Config::get('mediathor.media.files.routes.prefix', 'files'),
+        'middlware' => Config::get('mediathor.files.routes.middleware', []),
+        'without_middleware' => Config::get('mediathor.media.files.routes.without_middleware', []),
     ], function () {
         Route::post('/upload', [UploadController::class, 'store']);
         Route::delete('/delete', [UploadController::class, 'destroy']);
@@ -29,9 +29,9 @@ Route::group([
 
     // Images
     Route::group([
-        'prefix' => Config::get('mediathor.media.images.route_prefix', 'images'),
-        'middlware' => Config::get('mediathor.media.images.middleware', []),
-        'without_middleware' => Config::get('mediathor.media.images.without_middleware', []),
+        'prefix' => Config::get('mediathor.media.images.routes.prefix', 'images'),
+        'middlware' => Config::get('mediathor.media.images.routes.middleware', []),
+        'without_middleware' => Config::get('mediathor.media.images.routes.without_middleware', []),
     ], function () {
         //
     });

@@ -13,40 +13,39 @@ declare(strict_types=1);
 
 return [
     'media' => [
-
-        'route_prefix' => 'media',
-
-        'middleware' => [
-            //
+        'routes' => [
+            'prefix' => 'media',
+            'middleware' => [
+                //
+            ],
+            'without_middleware' => [
+                'auth:sanctum',
+            ],
         ],
-
-        'without_middleware' => [
-            'auth:sanctum',
-        ],
-
         'files' => [
-
-            'route_prefix' => 'files',
-
-            'middleware' => [
-                //
-            ],
-
-            'without_middleware' => [
-                'auth:sanctum',
+            'routes' => [
+                'prefix' => 'files',
+                'middleware' => [
+                    //
+                ],
+                'without_middleware' => [
+                    'auth:sanctum',
+                ],
             ],
         ],
-
         'images' => [
-
-            'route_prefix' => 'images',
-
-            'middleware' => [
-                //
+            'routes' => [
+                'prefix' => 'images',
+                'middleware' => [
+                    //
+                ],
+                'without_middleware' => [
+                    'auth:sanctum',
+                ],
             ],
-
-            'without_middleware' => [
-                'auth:sanctum',
+            'widescreen_ratio' => [
+                'width' => 1.0,
+                'height' => 1.0,
             ],
         ],
     ],
