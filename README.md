@@ -26,11 +26,17 @@ php artisan mediathor:install
   <summary>You can also install manually:</summary>
 
   ```bash
+# Publish MediaThor config
+php artisan vendor:publish --provider="Dystcz\MediaThor\MediaThorServiceProvider" --tag="migrations"
+            
+# Publish Medialibrary config
+php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="config"
+
 # Publish Medialibrary migrations
 php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
 
-# Publish Medialibrary config
-php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="config"
+# Publish Filepond config
+php artisan vendor:publish --provider="Sopamo\LaravelFilepond\LaravelFilepondServiceProvider"
 
 # Run migrations
 php artisan migrate
@@ -50,7 +56,7 @@ php artisan migrate
     - [ ] Automatic `with` and `height` as `Media` custom properties
     - [ ] `MediaController`
 
-Everything is configurable via in `config/mediathor.php`
+Everything is configurable in `config/mediathor.php`
 
 ## Usage
 
@@ -79,6 +85,8 @@ If you discover any security related issues, please email jakub@dy.st instead of
 ## Credits
 
 -   [Jakub Theimer](https://github.com/dystcz)
+-   [Spatie](https://github.com/spatie) for the `laravel-medialibrary` package
+-   [Sopamo](https://github.com/sopamo) for the `laravel-filepond` package
 -   [All Contributors](../../contributors)
 
 ## License
