@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Dystcz\Mediathor\Domain\Files\Data\FileData;
-use Dystcz\Mediathor\Domain\Files\Data\UploadData;
+use Dystcz\MediaThor\Domain\Files\Data\FileData;
+use Dystcz\MediaThor\Domain\Files\Data\UploadData;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;

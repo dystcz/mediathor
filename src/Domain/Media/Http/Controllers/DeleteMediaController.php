@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Domain\Media\Http\Controllers;
 
-use Dystcz\Mediathor\Domain\Base\Http\Controllers\Controller;
+use Dystcz\MediaThor\Domain\Base\Http\Controllers\Controller;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 

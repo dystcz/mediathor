@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Dystcz\Mediathor\Domain\Files\Http\Controllers\UploadController;
-use Dystcz\Mediathor\Domain\Media\Http\Controllers\MediaDownloadController;
-use Dystcz\Mediathor\Domain\Media\Http\Controllers\MediaPreviewController;
+use Dystcz\MediaThor\Domain\Files\Http\Controllers\UploadController;
+use Dystcz\MediaThor\Domain\Media\Http\Controllers\MediaDownloadController;
+use Dystcz\MediaThor\Domain\Media\Http\Controllers\MediaPreviewController;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 

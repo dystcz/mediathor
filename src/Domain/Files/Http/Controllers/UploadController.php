@@ -1,7 +1,7 @@
 
 <?php
 
-namespace Dystcz\Mediathor\Domain\Files\Http\Controllers;
+namespace Dystcz\MediaThor\Domain\Files\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

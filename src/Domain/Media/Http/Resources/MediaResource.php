@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dystcz\Mediathor\Domain\Media\Http\Resources;
+namespace Dystcz\MediaThor\Domain\Media\Http\Resources;
 
-use Dystcz\Mediathor\Domain\Media\Models\Media;
+use Dystcz\MediaThor\Domain\Media\Models\Media;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;

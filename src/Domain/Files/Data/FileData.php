@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dystcz\Mediathor\Domain\Files\Data;
+namespace Dystcz\MediaThor\Domain\Files\Data;
 
 use Illuminate\Contracts\Support\Arrayable;
 

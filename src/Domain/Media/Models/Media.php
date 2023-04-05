@@ -1,6 +1,6 @@
 <?php
 
-namespace Dystcz\Mediathor\Domain\Media\Models;
+namespace Dystcz\MediaThor\Domain\Media\Models;
 
 use Spatie\MediaLibrary\MediaCollections\Models\Media as BaseMedia;
 

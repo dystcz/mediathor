@@ -1,11 +1,13 @@
 <?php
 
-namespace Dystcz\Mediathor\Domain\Mediathor\Facades;
+declare(strict_types=1);
+
+namespace Dystcz\MediaThor\Domain\MediaThor\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Dystcz\Mediathor\Skeleton\SkeletonClass
+ * @see \Dystcz\MediaThor\Skeleton\SkeletonClass
  */
 class MediaThor extends Facade
 {

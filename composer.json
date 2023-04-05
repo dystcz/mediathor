@@ -3,7 +3,9 @@
     "description": "MediaThor will help you setup your media workflow with the speed of lightning ⚡",
     "keywords": [
         "dystcz",
-        "mediathor"
+        "mediathor",
+        "laravel",
+        "php"
     ],
     "homepage": "https://github.com/dystcz/mediathor",
     "license": "MIT",
@@ -33,17 +35,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Dystcz\\Mediathor\\": "src"
+            "Dystcz\\MediaThor\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dystcz\\Mediathor\\Tests\\": "tests"
+            "Dystcz\\MediaThor\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "test-coverage": "vendor/bin/pest --coverage",
         "analyse": "vendor/bin/phpstan analyse"
     },
     "config": {
@@ -55,10 +57,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dystcz\\Mediathor\\MediaThorServiceProvider"
+                "Dystcz\\MediaThor\\MediaThorServiceProvider"
             ],
             "aliases": {
-                "Mediathor": "Dystcz\\MediaThor\\Facades\\MediaThor"
+                "MediaThor": "Dystcz\\MediaThor\\Facades\\MediaThor"
             }
         }
     },

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dystcz\Mediathor\Domain\Media\Http\Controllers;
+namespace Dystcz\MediaThor\Domain\Media\Http\Controllers;
 
-use Dystcz\Mediathor\Domain\Base\Http\Controllers\Controller;
+use Dystcz\MediaThor\Domain\Base\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Validation\ValidationException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dystcz\Mediathor\Domain\Mediathor;
+namespace Dystcz\MediaThor\Domain\MediaThor;
 
 class MediaThor
 {
